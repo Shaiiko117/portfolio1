@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 // 1. KEEP these only if they are STILL inside the "src/assets" folder:
-import profilePic from './assets/profile.jpeg';
+const profilePic = './assets/profile.jpeg';
 
 // 2. NEW String Paths for files you moved to "public/assets/":
 const shopUiPreview = '/assets/1.png';
