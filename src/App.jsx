@@ -21,7 +21,7 @@ const backgroundMe = '/assets/backgroundme.jpeg';
 const finalProjectPhotoOne = '/assets/finalproj.jpeg';
 const finalProjectPhotoTwo = '/assets/finalproj2.jpeg';
 const poster1 = '/assets/poster1.jpg';
-const brandmanuel = '/assets/FinalOptimized';
+const finalDesignGallery = '/assets/FinalOptimized';
 
 console.log('brandLogoIntro:', brandLogoIntro)
 
@@ -86,7 +86,7 @@ const projectGroups = [
         type: 'Brand identity gallery',
         description: 'A full visual identity presentation including cover design, logo work, typography, color system, stationery, business card design, photography, and final contact page.',
         tools: ['Brand Identity', 'Logo Design', 'Typography', 'Print Design'],
-        gallery: brandmanuel,
+        gallery: finalDesignGallery,
       },
       {
         title: 'Poster Design for Marketing',
