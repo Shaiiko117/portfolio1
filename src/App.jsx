@@ -1,22 +1,26 @@
-import { useEffect, useRef, useState } from 'react'
-import profilePic from './assets/profile.jpeg'
-import shopUiPreview from './assets/1.png'
-import recyclingUiPreview from './assets/2.png'
-import fitnessUiPreview from './assets/3.png'
-import taskUiPreview from './assets/4.png'
-import cakeUiPreview from './assets/5.png'
-import alexanderLogoIntro from './assets/alexander2.mp4'
-import brandLogoIntro from './assets/az37otghmoghusrzatrl.mp4'
-import creativeLogoIntro from './assets/logointro1.mp4'
-import motionLogoIntro from './assets/orpfu9v4dz1ptfdco2rn.mp4'
-import esoft1 from './assets/esoft_1.mp4'
-import esoftFundraiserVideo from './assets/esoft_2.mp4'
-import esoftGraduationPhotoOne from './assets/esoft_grad1.jpeg'
-import esoftGraduationPhotoTwo from './assets/esoft_grad2.jpeg'
-import backgroundMe from './assets/backgroundme.jpeg'
-import finalProjectPhotoOne from './assets/finalproj.jpeg'
-import finalProjectPhotoTwo from './assets/finalproj2.jpeg'
-import poster1 from './assets/poster1.jpg'
+import { useEffect, useRef, useState } from 'react';
+
+// 1. KEEP these only if they are STILL inside the "src/assets" folder:
+import profilePic from './assets/profile.jpeg';
+
+// 2. NEW String Paths for files you moved to "public/assets/":
+const shopUiPreview = '/assets/1.png';
+const recyclingUiPreview = '/assets/2.png';
+const fitnessUiPreview = '/assets/3.png';
+const taskUiPreview = '/assets/4.png';
+const cakeUiPreview = '/assets/5.png';
+const alexanderLogoIntro = '/assets/alexander2.mp4';
+const brandLogoIntro = '/assets/az37otghmoghusrzatrl.mp4';
+const creativeLogoIntro = '/assets/logointro1.mp4';
+const motionLogoIntro = '/assets/orpfu9v4dz1ptfdco2rn.mp4';
+const esoft1 = '/assets/esoft_1.mp4';
+const esoftFundraiserVideo = '/assets/esoft_2.mp4';
+const esoftGraduationPhotoOne = '/assets/esoft_grad1.jpeg';
+const esoftGraduationPhotoTwo = '/assets/esoft_grad2.jpeg';
+const backgroundMe = '/assets/backgroundme.jpeg';
+const finalProjectPhotoOne = '/assets/finalproj.jpeg';
+const finalProjectPhotoTwo = '/assets/finalproj2.jpeg';
+const poster1 = '/assets/poster1.jpg';
 
 console.log('brandLogoIntro:', brandLogoIntro)
 
