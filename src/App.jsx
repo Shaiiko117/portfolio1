@@ -24,6 +24,7 @@ const poster1 = '/assets/poster1.jpg';
 
 
 
+
 const finalDesignGallery = [
   '1 Cover.webp',
   '2 contents.webp',
@@ -89,6 +90,14 @@ const projectGroups = [
         tools: ['Poster Design', 'Typography', 'Layout', 'Visual Branding'],
         image: poster1,
       },
+     {
+        title: 'Football High Dynamic Edit ',
+        type: 'Sport Clip',
+        description: 'A high-energy sports highlight compilation including dynamic pacing, precise beat-matching, advanced color grading, custom transitions, immersive sound design, and animated stat overlays.',
+        tools: ['Video Editing', 'Sports', 'Intro'],
+        video: brandLogoIntro,
+        projectUrl: 'https://your-project-link.com/creative-logo-motion',
+      },
       {
         title: 'Alexander Live Logo Intro',
         type: 'Logo intro video',
@@ -104,14 +113,6 @@ const projectGroups = [
         description: 'Edited a compact logo motion piece with transitions, pacing, and a clean finishing style.',
         tools: ['Video Editing', 'Brand Motion', 'Intro'],
         video: creativeLogoIntro,
-        projectUrl: 'https://your-project-link.com/creative-logo-motion',
-      },
-      {
-        title: 'YouTube Channel Logo Intro',
-        type: 'Logo intro video',
-        description: 'Edited a compact logo motion piece with transitions, pacing, and a clean finishing style.',
-        tools: ['Video Editing', 'Brand Motion', 'Intro'],
-        video: brandLogoIntro,
         projectUrl: 'https://your-project-link.com/creative-logo-motion',
       },
       {
