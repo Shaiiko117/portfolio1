@@ -21,6 +21,7 @@ const backgroundMe = '/assets/backgroundme.jpeg';
 const finalProjectPhotoOne = '/assets/finalproj.jpeg';
 const finalProjectPhotoTwo = '/assets/finalproj2.jpeg';
 const poster1 = '/assets/poster1.jpg';
+const football = '/assets/Football.mp4';
 
 console.log('brandLogoIntro:', brandLogoIntro)
 
@@ -84,11 +85,11 @@ const projectGroups = [
     accent: 'text-[#7C3AED]',
     projects: [
       {
-        title: 'Brand Logo Manual',
-        type: 'Brand identity gallery',
-        description: 'A full visual identity presentation including cover design, logo work, typography, color system, stationery, business card design, photography, and final contact page.',
-        tools: ['Brand Identity', 'Logo Design', 'Typography', 'Print Design'],
-        gallery: finalDesignGallery,
+        title: 'Football Clip',
+        type: 'Sport Clips',
+        description: 'A high-energy sports highlight compilation including dynamic pacing, precise beat-matching, advanced color grading, custom transitions, immersive sound design, and animated stat overlays.',
+        tools: ['Sports', 'Edits', 'Shorts', 'VFX'],
+        gallery: football,
       },
       {
         title: 'Poster Design for Marketing',
@@ -113,6 +114,13 @@ const projectGroups = [
         tools: ['Video Editing', 'Brand Motion', 'Intro'],
         video: creativeLogoIntro,
         projectUrl: 'https://your-project-link.com/creative-logo-motion',
+      },
+     {
+        title: 'Brand Logo Manual',
+        type: 'Brand identity gallery',
+        description: 'A full visual identity presentation including cover design, logo work, typography, color system, stationery, business card design, photography, and final contact page.',
+        tools: ['Brand Identity', 'Logo Design', 'Typography', 'Print Design'],
+        gallery: finalDesignGallery,
       },
 
     ],
