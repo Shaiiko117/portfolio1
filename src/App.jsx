@@ -109,6 +109,14 @@ const projectGroups = [
         projectUrl: 'https://your-project-link.com/creative-logo-motion',
       },
       {
+        title: 'YouTube Channel Logo Intro',
+        type: 'Logo intro video',
+        description: 'Edited a compact logo motion piece with transitions, pacing, and a clean finishing style.',
+        tools: ['Video Editing', 'Brand Motion', 'Intro'],
+        video: brandLogoIntro,
+        projectUrl: 'https://your-project-link.com/creative-logo-motion',
+      },
+      {
         title: 'Brand Logo Manual',
         type: 'Brand identity gallery',
         description: 'A full visual identity presentation including cover design, logo work, typography, color system, stationery, business card design, photography, and final contact page.',
