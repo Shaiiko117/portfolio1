@@ -21,7 +21,6 @@ const backgroundMe = '/assets/backgroundme.jpeg';
 const finalProjectPhotoOne = '/assets/finalproj.jpeg';
 const finalProjectPhotoTwo = '/assets/finalproj2.jpeg';
 const poster1 = '/assets/poster1.jpg';
-const finalDesignGallery = '/assets/FinalOptimized';
 
 console.log('brandLogoIntro:', brandLogoIntro)
 
