@@ -98,14 +98,7 @@ const projectGroups = [
         video: alexanderLogoIntro,
         projectUrl: 'https://your-project-link.com/alexander-logo-intro',
       },
-      {
-        title: 'Youtube Reveal Intro',
-        type: 'Logo intro video',
-        description: 'Created a short reveal animation designed for brand presentation and digital media use.',
-        tools: ['Logo Reveal', 'Motion Design', 'Video'],
-        video: brandLogoIntro,
-        projectUrl: 'https://your-project-link.com/brand-reveal-intro',
-      },
+
       {
         title: 'Creative Logo Motion',
         type: 'Logo intro video',
@@ -114,14 +107,7 @@ const projectGroups = [
         video: creativeLogoIntro,
         projectUrl: 'https://your-project-link.com/creative-logo-motion',
       },
-      {
-        title: '3D Motion Logo Intro',
-        type: 'Logo intro video',
-        description: 'Produced a logo intro for use in videos, presentations, and social media brand content.',
-        tools: ['Motion Graphics', 'Logo Intro', 'Editing'],
-        video: motionLogoIntro,
-        projectUrl: 'https://your-project-link.com/motion-logo-intro',
-      },
+
     ],
   },
   {
