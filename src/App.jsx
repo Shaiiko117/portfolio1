@@ -21,7 +21,7 @@ const backgroundMe = '/assets/backgroundme.jpeg';
 const finalProjectPhotoOne = '/assets/finalproj.jpeg';
 const finalProjectPhotoTwo = '/assets/finalproj2.jpeg';
 const poster1 = '/assets/poster1.jpg';
-const football = '/assets/Football.mp4';
+const motion = '/assets/3d_motion.mp4';
 
 console.log('brandLogoIntro:', brandLogoIntro)
 
@@ -85,11 +85,11 @@ const projectGroups = [
     accent: 'text-[#7C3AED]',
     projects: [
       {
-        title: 'Football Clip',
-        type: 'Sport Clips',
-        description: 'A high-energy sports highlight compilation including dynamic pacing, precise beat-matching, advanced color grading, custom transitions, immersive sound design, and animated stat overlays.',
-        tools: ['Sports', 'Edits', 'Shorts', 'VFX'],
-        gallery: football,
+        title: '3D Motion',
+        type: '3D Motion Logo',
+        description: 'A full visual identity presentation including cover design, logo work, typography, color system, stationery, business card design, photography, and final contact page.',
+        tools: ['Sports', 'Edits', 'Typography', 'Print Design'],
+        gallery: motion,
       },
       {
         title: 'Poster Design for Marketing',
