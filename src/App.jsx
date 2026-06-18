@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
-// 1. KEEP these only if they are STILL inside the "src/assets" folder:
+
 const profilePic = './assets/profile.jpeg';
 
-// 2. NEW String Paths for files you moved to "public/assets/":
+
 const shopUiPreview = '/assets/1.png';
 const recyclingUiPreview = '/assets/2.png';
 const fitnessUiPreview = '/assets/3.png';
@@ -84,13 +84,6 @@ const projectGroups = [
     intro: 'Visual identity and digital media work including logos, promotional graphics, editing, and social content.',
     accent: 'text-[#7C3AED]',
     projects: [
-       {
-        title: 'Brand Logo Manual',
-        type: 'Brand identity gallery',
-        description: 'A full visual identity presentation including cover design, logo work, typography, color system, stationery, business card design, photography, and final contact page.',
-        tools: ['Brand Identity', 'Logo Design', 'Typography', 'Print Design'],
-        gallery: finalDesignGallery,
-      },
       {
         title: 'Poster Design for Marketing',
         type: 'Social Media Poster',
@@ -114,6 +107,13 @@ const projectGroups = [
         tools: ['Video Editing', 'Brand Motion', 'Intro'],
         video: creativeLogoIntro,
         projectUrl: 'https://your-project-link.com/creative-logo-motion',
+      },
+      {
+        title: 'Brand Logo Manual',
+        type: 'Brand identity gallery',
+        description: 'A full visual identity presentation including cover design, logo work, typography, color system, stationery, business card design, photography, and final contact page.',
+        tools: ['Brand Identity', 'Logo Design', 'Typography', 'Print Design'],
+        gallery: finalDesignGallery,
       },
     ],
   },
