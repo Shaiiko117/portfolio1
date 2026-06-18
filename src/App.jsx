@@ -26,7 +26,7 @@ console.log('brandLogoIntro:', brandLogoIntro)
 
 
 const finalDesignGallery = Object.entries(
-  import.meta.glob('./assets/Final/*.{png,jpg,jpeg,webp}', {
+  import.meta.glob('./assets/FinalOptimized/*.{png,jpg,jpeg,webp}', {
     eager: true,
     query: '?url',
     import: 'default',
