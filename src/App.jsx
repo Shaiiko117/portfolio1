@@ -10,7 +10,7 @@ const fitnessUiPreview = '/assets/3.png';
 const taskUiPreview = '/assets/4.png';
 const cakeUiPreview = '/assets/5.png';
 const alexanderLogoIntro = '/assets/alexander2.mp4';
-const brandLogoIntro = '/assets/ice.mp4';
+const brandLogoIntro = '/assets/Football.mp4';
 const creativeLogoIntro = '/assets/logointro1.mp4';
 const motionLogoIntro = '/assets/orpfu9v4dz1ptfdco2rn.mp4';
 const esoft1 = '/assets/esoft_1.mp4';
@@ -22,8 +22,6 @@ const finalProjectPhotoOne = '/assets/finalproj.jpeg';
 const finalProjectPhotoTwo = '/assets/finalproj2.jpeg';
 const poster1 = '/assets/poster1.jpg';
 
-
-console.log('brandLogoIntro:', brandLogoIntro)
 
 
 const finalDesignGallery = [
