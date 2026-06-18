@@ -10,7 +10,7 @@ const fitnessUiPreview = '/assets/3.png';
 const taskUiPreview = '/assets/4.png';
 const cakeUiPreview = '/assets/5.png';
 const alexanderLogoIntro = '/assets/alexander2.mp4';
-const brandLogoIntro = '/assets/az37otghmoghusrzatrl.mp4';
+const brandLogoIntro = '/assets/ice.mp4';
 const creativeLogoIntro = '/assets/logointro1.mp4';
 const motionLogoIntro = '/assets/orpfu9v4dz1ptfdco2rn.mp4';
 const esoft1 = '/assets/esoft_1.mp4';
@@ -90,7 +90,7 @@ const projectGroups = [
         type: '3D Parts Motion',
         description: 'A full visual identity presentation including cover design, logo work, typography, color system, stationery, business card design, photography, and final contact page.',
         tools: ['Brand Identity', 'Logo Design', 'Typography', 'Print Design'],
-        gallery: motion,
+        gallery: brandLogoIntro,
       },
       {
         title: 'Poster Design for Marketing',
@@ -676,7 +676,7 @@ function App() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            <p>&copy; 2024 Shashika Munasinghe. All rights reserved.</p>
+            <p>&copy; 2026 Shashika Munasinghe. All rights reserved.</p>
             <p>Designed and built with passion</p>
           </div>
         </div>
