@@ -25,22 +25,25 @@ const poster1 = '/assets/poster1.jpg';
 console.log('brandLogoIntro:', brandLogoIntro)
 
 
-const finalDesignGallery = Object.entries(
-  import.meta.glob('./assets/FinalOptimized/*.{png,jpg,jpeg,webp}', {
-    eager: true,
-    query: '?url',
-    import: 'default',
-  }),
-)
-  .map(([path, src]) => ({
-    src,
-    title: path
-      .split('/')
-      .pop()
-      .replace(/\.[^/.]+$/, '')
-      .replace(/^\d+\s*/, ''),
-  }))
-  .sort((first, second) => first.title.localeCompare(second.title, undefined, { numeric: true }))
+const finalDesignGallery = [
+  '1 Cover.webp',
+  '2 contents.webp',
+  '3 info.webp',
+  '4 logo.webp',
+  '5 typography.webp',
+  '6 sizes.webp',
+  '7 color.webp',
+  '8 letter head.webp',
+  '9 business card.webp',
+  '10 photography 1.webp',
+  '11 photography 2.webp',
+  '12 photography 3.webp',
+  '13 lets talk.webp',
+].map((file) => ({
+  src: encodeURI('/assets/FinalOptimized/' + file),
+  title: file.replace(/\.[^/.]+$/, '').replace(/^\d+\s*/, ''),
+}))
+
 
 const realLifeHighlights = [
   {
@@ -307,12 +310,7 @@ function App() {
             <a href="#projects" className="bg-[#7C3AED] hover:bg-[#6D28D9] px-8 py-3 rounded-lg transition">
               View Projects
             </a>
-            <a
-              href="#contact"
-              className="border border-white/20 hover:border-[#22D3EE] hover:text-[#22D3EE] px-8 py-3 rounded-lg transition"
-            >
-              Get in touch
-            </a>
+            
           </div>
         </div>
 
@@ -330,19 +328,6 @@ function App() {
         </div>
       </section>
 
-      <section id="contact" className="relative z-10 max-w-5xl mx-auto px-8 md:px-16 pb-20">
-        <div className="border border-white/10 bg-white/5 backdrop-blur-xl rounded-lg p-8 md:p-10 text-center">
-          <p className="text-[#22D3EE] mb-2 text-sm uppercase tracking-[0.18em]">Get in touch</p>
-          <h2 className="text-2xl md:text-3xl font-bold">Let's talk about your next project</h2>
-          <p className="text-gray-400 mt-3 max-w-2xl mx-auto leading-relaxed">
-            Open to design, UI/UX, and development work. The fastest way to reach me is by email.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mt-6">
-            <a href="mailto:hello@shashika.dev" className="bg-[#7C3AED] hover:bg-[#6D28D9] px-6 py-3 rounded-lg transition">Email me</a>
-            <a href="https://www.linkedin.com/in/shashika-munasinghe" target="_blank" rel="noopener noreferrer" className="border border-white/20 hover:border-[#22D3EE] hover:text-[#22D3EE] px-6 py-3 rounded-lg transition">LinkedIn</a>
-          </div>
-        </div>
-      </section>
 
       <section id="about" className="relative z-10 max-w-5xl mx-auto px-8 md:px-16 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
