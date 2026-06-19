@@ -97,7 +97,6 @@ const projectGroups = [
         description: 'A high-energy sports highlight compilation including dynamic pacing, precise beat-matching, advanced color grading, custom transitions, immersive sound design, and animated stat overlays.',
         tools: ['Video Editing', 'Sports', 'Intro'],
         video: brandLogoIntro,
-        projectUrl: 'https://your-project-link.com/creative-logo-motion',
       },
       {
         title: 'Alexander Live Logo Intro',
@@ -105,7 +104,6 @@ const projectGroups = [
         description: 'Animated a logo intro with motion, timing, and visual polish for a branded opening sequence.',
         tools: ['Logo Animation', 'Motion', 'Intro Video'],
         video: alexanderLogoIntro,
-        projectUrl: 'https://your-project-link.com/alexander-logo-intro',
       },
       {
         title: 'Creative Logo Motion',
@@ -113,15 +111,13 @@ const projectGroups = [
         description: 'Edited a compact logo motion piece with transitions, pacing, and a clean finishing style.',
         tools: ['Video Editing', 'Brand Motion', 'Intro'],
         video: creativeLogoIntro,
-        projectUrl: 'https://your-project-link.com/creative-logo-motion',
       },
             {
         title: 'Logo Reveal',
         type: 'Logo intro video',
-        description: 'Edited a compact logo motion piece with transitions, pacing, and a clean finishing style.',
-        tools: ['Video Editing', 'Brand Motion', 'Intro'],
+        description: 'A dynamic logo reveal with motion graphics, timing, and visual polish for a branded opening sequence.',
+        tools: ['Video Editing', 'Logo Intro', 'Intro', 'YouTube'],
         video: ice,
-        projectUrl: 'https://your-project-link.com/creative-logo-motion',
       },
       {
         title: 'Brand Logo Manual',
@@ -143,7 +139,7 @@ const projectGroups = [
         description: 'Created a dark product browsing experience for laptops and computer hardware with category navigation and product cards.',
         tools: ['UI Design', 'Product Cards', 'Responsive Layout'],
         image: shopUiPreview,
-        projectUrl: 'https://your-project-link.com/computer-store-interface',
+        projectUrl: 'https://www.figma.com/design/YTLIHUSniNZgiQzr8kUm20/HCI---Computer-store-remake-improve-project-009?node-id=0-1&t=zay7J7NTkdAjSKvk-1',
       },
       {
         title: 'Recycling Rewards App',
@@ -208,8 +204,8 @@ const projectGroups = [
 
 const projectStats = [
   { value: '15', label: 'Official Projects Completed', color: 'text-[#7C3AED]' },
-  { value: '18', label: 'Published UI/UX Designs', color: 'text-[#22D3EE]' },
-  { value: '4', label: 'Real-Life Highlights', color: 'text-[#7C3AED]' },
+  { value: '18', label: 'Published Projects', color: 'text-[#22D3EE]' },
+  { value: '11', label: 'Real-Life Highlights', color: 'text-[#7C3AED]' },
 ]
 
 function App() {
