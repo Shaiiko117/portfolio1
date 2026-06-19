@@ -15,6 +15,7 @@ const creativeLogoIntro = '/assets/logointro1.mp4';
 const motionLogoIntro = '/assets/orpfu9v4dz1ptfdco2rn.mp4';
 const esoft1 = '/assets/esoft_1.mp4';
 const esoftFundraiserVideo = '/assets/esoft_2.mp4';
+const ice = '/assets/ice.mp4'
 const esoftGraduationPhotoOne = '/assets/esoft_grad1.jpeg';
 const esoftGraduationPhotoTwo = '/assets/esoft_grad2.jpeg';
 const backgroundMe = '/assets/backgroundme.jpeg';
@@ -106,13 +107,20 @@ const projectGroups = [
         video: alexanderLogoIntro,
         projectUrl: 'https://your-project-link.com/alexander-logo-intro',
       },
-
       {
         title: 'Creative Logo Motion',
         type: 'Logo intro video',
         description: 'Edited a compact logo motion piece with transitions, pacing, and a clean finishing style.',
         tools: ['Video Editing', 'Brand Motion', 'Intro'],
         video: creativeLogoIntro,
+        projectUrl: 'https://your-project-link.com/creative-logo-motion',
+      },
+            {
+        title: 'Logo Reveal',
+        type: 'Logo intro video',
+        description: 'Edited a compact logo motion piece with transitions, pacing, and a clean finishing style.',
+        tools: ['Video Editing', 'Brand Motion', 'Intro'],
+        video: ice,
         projectUrl: 'https://your-project-link.com/creative-logo-motion',
       },
       {
