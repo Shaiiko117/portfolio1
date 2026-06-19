@@ -91,7 +91,7 @@ const projectGroups = [
         image: poster1,
       },
      {
-        title: 'Football High Dynamic Edit ',
+        title: 'Sports High Dynamic Edit ',
         type: 'Sport Clip',
         description: 'A high-energy sports highlight compilation including dynamic pacing, precise beat-matching, advanced color grading, custom transitions, immersive sound design, and animated stat overlays.',
         tools: ['Video Editing', 'Sports', 'Intro'],
