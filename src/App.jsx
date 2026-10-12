@@ -214,7 +214,7 @@ const aiTools = [
     maker: 'OpenAI',
     initials: 'GPT',
     side: 'left',
-    position: '26%',
+    position: '4%',
     focus: 'Ideas, writing, and problem-solving',
     use: 'Explore concepts, shape a first draft, explain code, or turn rough ideas into clear next steps.',
     accent: 'text-[#22D3EE] border-[#22D3EE]/30 from-[#22D3EE]/15',
@@ -224,7 +224,7 @@ const aiTools = [
     maker: 'Anthropic',
     initials: 'CL',
     side: 'left',
-    position: '46%',
+    position: '28%',
     focus: 'Long-form analysis and coding',
     use: 'Work through detailed briefs, summarize documents, and explore code or debugging problems.',
     accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
@@ -234,7 +234,7 @@ const aiTools = [
     maker: 'Google',
     initials: 'G',
     side: 'left',
-    position: '70%',
+    position: '59%',
     focus: 'Multimodal exploration',
     use: 'Ask questions across text and visual inputs such as screenshots, charts, images, and documents.',
     accent: 'text-[#67E8F9] border-[#22D3EE]/30 from-[#22D3EE]/15',
@@ -244,7 +244,7 @@ const aiTools = [
     maker: 'GitHub',
     initials: '</>',
     side: 'right',
-    position: '26%',
+    position: '13%',
     focus: 'In-editor coding support',
     use: 'Get contextual code suggestions, explanations, and help making changes while building.',
     accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
@@ -254,7 +254,7 @@ const aiTools = [
     maker: 'Perplexity AI',
     initials: 'P',
     side: 'right',
-    position: '46%',
+    position: '43%',
     focus: 'Research with cited sources',
     use: 'Explore a topic, then follow the linked sources to check important details for yourself.',
     accent: 'text-[#67E8F9] border-[#22D3EE]/30 from-[#22D3EE]/15',
@@ -264,7 +264,7 @@ const aiTools = [
     maker: 'Midjourney',
     initials: 'MJ',
     side: 'right',
-    position: '70%',
+    position: '76%',
     focus: 'Visual concepts and image generation',
     use: 'Turn descriptive prompts into visual directions, moodboard ideas, and image concepts.',
     accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
@@ -458,7 +458,7 @@ function App() {
             </div>
           </details>
         ))}
-        <details className="ai-bubble-dock ai-bubble-right ai-bubble-tip" style={{ top: '86%' }}>
+        <details className="ai-bubble-dock ai-bubble-right ai-bubble-tip" style={{ top: '92%' }}>
           <summary className="ai-bubble-trigger border border-[#7C3AED]/50 text-[#C4B5FD]" aria-label="Show prompt tip">
             TIP
           </summary>
