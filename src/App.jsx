@@ -372,11 +372,6 @@ function App() {
               Skills
             </a>
           </li>
-          <li>
-            <a href="#ai-toolkit" className="hover:text-[#22D3EE] transition">
-              AI Toolkit
-            </a>
-          </li>
         </ul>
       </nav>
 
