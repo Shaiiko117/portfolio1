@@ -795,7 +795,7 @@ function App() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            <p>&copy; 2026 Shashika Munasinghe. All rights reserved.</p>
+            <p>&copy; 2026 Shashika Munasinghe.</p>
             <p>Designed and built with passion</p>
           </div>
         </div>
