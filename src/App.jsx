@@ -222,8 +222,8 @@ const aiTools = [
     side: 'left',
     position: '4%',
     edgeShift: '0rem',
-    focus: 'Ideas, writing, and problem-solving',
-    use: 'Explore concepts, shape a first draft, explain code, or turn rough ideas into clear next steps.',
+    bestUse: 'Brainstorm, draft, explain ideas, and work through everyday coding or planning questions.',
+    why: 'Its conversational workflow makes it easy to refine an answer with follow-up questions and adapt it to different tasks.',
     accent: 'text-[#22D3EE] border-[#22D3EE]/30 from-[#22D3EE]/15',
   },
   {
@@ -233,8 +233,8 @@ const aiTools = [
     side: 'left',
     position: '28%',
     edgeShift: '1.75rem',
-    focus: 'Long-form analysis and coding',
-    use: 'Work through detailed briefs, summarize documents, and explore code or debugging problems.',
+    bestUse: 'Analyze long documents, refine detailed writing, and review complex code.',
+    why: 'Its long-context strengths help it keep more source material in view and return thoughtful, structured summaries or feedback.',
     accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
   },
   {
@@ -244,8 +244,8 @@ const aiTools = [
     side: 'left',
     position: '59%',
     edgeShift: '1.25rem',
-    focus: 'Multimodal exploration',
-    use: 'Ask questions across text and visual inputs such as screenshots, charts, images, and documents.',
+    bestUse: 'Work with mixed text and visual inputs such as images, screenshots, and charts.',
+    why: 'Its multimodal design is useful when a task needs context from more than plain text.',
     accent: 'text-[#67E8F9] border-[#22D3EE]/30 from-[#22D3EE]/15',
   },
   {
@@ -255,8 +255,8 @@ const aiTools = [
     side: 'right',
     position: '13%',
     edgeShift: '1rem',
-    focus: 'In-editor coding support',
-    use: 'Get contextual code suggestions, explanations, and help making changes while building.',
+    bestUse: 'Write, complete, refactor, and explain code while working in your editor.',
+    why: 'It can use your coding context to offer suggestions right where you build and test.',
     accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
   },
   {
@@ -266,8 +266,8 @@ const aiTools = [
     side: 'right',
     position: '43%',
     edgeShift: '0rem',
-    focus: 'Research with cited sources',
-    use: 'Explore a topic, then follow the linked sources to check important details for yourself.',
+    bestUse: 'Research current topics and find useful sources to investigate.',
+    why: 'It pairs concise answers with source links, making it easier to trace claims and verify details.',
     accent: 'text-[#67E8F9] border-[#22D3EE]/30 from-[#22D3EE]/15',
   },
   {
@@ -277,8 +277,8 @@ const aiTools = [
     side: 'right',
     position: '76%',
     edgeShift: '1.5rem',
-    focus: 'Visual concepts and image generation',
-    use: 'Turn descriptive prompts into visual directions, moodboard ideas, and image concepts.',
+    bestUse: 'Create visual concepts, moodboards, and stylized image variations.',
+    why: 'It turns natural-language prompts into images, making visual exploration and style iteration fast.',
     accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
   },
 ]
@@ -465,22 +465,13 @@ function App() {
             <div className="ai-bubble-panel rounded-2xl border border-white/10 bg-[#0B1220]/95 p-5 shadow-[0_18px_48px_rgba(2,6,23,0.6)] backdrop-blur-xl">
               <p className="text-xs uppercase tracking-[0.16em] text-gray-500">{tool.maker}</p>
               <h3 className="text-lg font-bold mt-1 text-white">{tool.name}</h3>
-              <p className={`text-sm font-semibold mt-4 ${tool.accent.split(' ')[0]}`}>{tool.focus}</p>
-              <p className="text-sm text-gray-300 mt-2 leading-relaxed">{tool.use}</p>
+              <p className={`text-sm font-semibold mt-4 ${tool.accent.split(' ')[0]}`}>Best use</p>
+              <p className="text-sm text-gray-300 mt-1 leading-relaxed">{tool.bestUse}</p>
+              <p className={`text-sm font-semibold mt-4 ${tool.accent.split(' ')[0]}`}>Why</p>
+              <p className="text-sm text-gray-300 mt-1 leading-relaxed">{tool.why}</p>
             </div>
           </details>
         ))}
-        <details className="ai-bubble-dock ai-bubble-right ai-bubble-tip" style={{ top: '92%', '--edge-shift': '0.5rem' }}>
-          <summary className="ai-bubble-trigger border border-[#7C3AED]/50 text-[#C4B5FD]" aria-label="Show prompt tip">
-            TIP
-          </summary>
-          <div className="ai-bubble-panel rounded-2xl border border-[#7C3AED]/30 bg-[#0B1220]/95 p-5 shadow-[0_18px_48px_rgba(2,6,23,0.6)] backdrop-blur-xl">
-            <p className="text-xs uppercase tracking-[0.16em] text-[#C4B5FD]">Prompt tip</p>
-            <p className="text-sm text-gray-300 mt-2 leading-relaxed">
-              Include your goal, useful context, and the format you want. Review the result and verify important details.
-            </p>
-          </div>
-        </details>
       </aside>
 
       <section id="projects" className="relative z-10 max-w-7xl mx-auto px-8 md:px-16 pb-24">

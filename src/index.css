@@ -169,15 +169,6 @@ body {
   --float-rebound-shift: 7px;
 }
 
-.ai-bubble-dock:nth-child(7) {
-  --float-duration: 7.2s;
-  --float-delay: -3.8s;
-  --float-distance: -24px;
-  --float-shift: 10px;
-  --float-rebound-distance: 9px;
-  --float-rebound-shift: -6px;
-}
-
 @keyframes ai-bubble-float {
   0%, 100% {
     transform: translate3d(0, 0, 0) rotate(-3deg);
