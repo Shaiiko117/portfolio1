@@ -19,3 +19,105 @@ body {
   outline: 2px solid #22d3ee;
   outline-offset: 2px;
 }
+
+.ai-side-bubbles {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.ai-bubble-dock {
+  display: block;
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  pointer-events: auto;
+}
+
+.ai-bubble-left {
+  left: max(0.75rem, calc((100vw - 80rem) / 2 - 4rem));
+}
+
+.ai-bubble-right {
+  right: max(0.75rem, calc((100vw - 80rem) / 2 - 4rem));
+}
+
+.ai-bubble-trigger {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: linear-gradient(145deg, rgb(30 41 59 / 94%), rgb(7 11 20 / 96%));
+  box-shadow: 0 0 24px rgb(34 211 238 / 14%);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  list-style: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+@media (max-width: 1023px) {
+  .ai-bubble-dock,
+  .ai-bubble-trigger {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .ai-bubble-left {
+    left: 0;
+  }
+
+  .ai-bubble-right {
+    right: 0;
+  }
+}
+
+.ai-bubble-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.ai-bubble-trigger:hover,
+.ai-bubble-trigger:focus-visible {
+  transform: scale(1.08);
+  box-shadow: 0 0 28px rgb(34 211 238 / 32%);
+}
+
+.ai-bubble-panel {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: min(17rem, calc(100vw - 6rem));
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+.ai-bubble-left .ai-bubble-panel {
+  left: calc(100% + 0.75rem);
+  transform: translate(-0.5rem, -50%);
+}
+
+.ai-bubble-right .ai-bubble-panel {
+  right: calc(100% + 0.75rem);
+  transform: translate(0.5rem, -50%);
+}
+
+.ai-bubble-dock:hover .ai-bubble-panel,
+.ai-bubble-dock:focus-within .ai-bubble-panel,
+.ai-bubble-dock[open] .ai-bubble-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(0, -50%);
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-bubble-trigger,
+  .ai-bubble-panel {
+    transition: none;
+  }
+}
