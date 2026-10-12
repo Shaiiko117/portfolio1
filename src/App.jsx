@@ -6,28 +6,27 @@ import copilotLogo from '../github copilot.png';
 import perplexityLogo from '../perplexity logo.png';
 import midjourneyLogo from '../midjourney logo.png';
 
+const assetUrl = (path) => `${import.meta.env.BASE_URL}assets/${path.split('/').map(encodeURIComponent).join('/')}`;
 
-const profilePic = './assets/profile.jpeg';
+const profilePic = assetUrl('profile.jpeg');
 
-
-const shopUiPreview = '/assets/1.png';
-const recyclingUiPreview = '/assets/2.png';
-const fitnessUiPreview = '/assets/3.png';
-const taskUiPreview = '/assets/4.png';
-const cakeUiPreview = '/assets/5.png';
-const alexanderLogoIntro = '/assets/alexander2.mp4';
-const brandLogoIntro = '/assets/Football.mp4';
-const creativeLogoIntro = '/assets/logointro1.mp4';
-const motionLogoIntro = '/assets/orpfu9v4dz1ptfdco2rn.mp4';
-const esoft1 = '/assets/esoft_1.mp4';
-const esoftFundraiserVideo = '/assets/esoft_2.mp4';
-const ice = '/assets/ice.mp4'
-const esoftGraduationPhotoOne = '/assets/esoft_grad1.jpeg';
-const esoftGraduationPhotoTwo = '/assets/esoft_grad2.jpeg';
-const backgroundMe = '/assets/backgroundme.jpeg';
-const finalProjectPhotoOne = '/assets/finalproj.jpeg';
-const finalProjectPhotoTwo = '/assets/finalproj2.jpeg';
-const poster1 = '/assets/poster1.jpg';
+const shopUiPreview = assetUrl('1.png');
+const recyclingUiPreview = assetUrl('2.png');
+const fitnessUiPreview = assetUrl('3.png');
+const taskUiPreview = assetUrl('4.png');
+const cakeUiPreview = assetUrl('5.png');
+const alexanderLogoIntro = assetUrl('alexander2.mp4');
+const brandLogoIntro = assetUrl('Football.mp4');
+const creativeLogoIntro = assetUrl('logointro1.mp4');
+const esoft1 = assetUrl('esoft_1.mp4');
+const esoftFundraiserVideo = assetUrl('esoft_2.mp4');
+const ice = assetUrl('ice.mp4');
+const esoftGraduationPhotoOne = assetUrl('esoft_grad1.jpeg');
+const esoftGraduationPhotoTwo = assetUrl('esoft_grad2.jpeg');
+const backgroundMe = assetUrl('backgroundme.jpeg');
+const finalProjectPhotoOne = assetUrl('finalproj.jpeg');
+const finalProjectPhotoTwo = assetUrl('finalproj2.jpeg');
+const poster1 = assetUrl('poster1.jpg');
 
 
 
@@ -47,7 +46,7 @@ const finalDesignGallery = [
   '12 photography 3.webp',
   '13 lets talk.webp',
 ].map((file) => ({
-  src: encodeURI('/assets/FinalOptimized/' + file),
+  src: assetUrl(`FinalOptimized/${file}`),
   title: file.replace(/\.[^/.]+$/, '').replace(/^\d+\s*/, ''),
 }))
 
