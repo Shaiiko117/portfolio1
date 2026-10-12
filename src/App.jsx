@@ -1,4 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import chatgptLogo from '../chatgpt logo.png';
+import claudeLogo from '../claude logo.png';
+import geminiLogo from '../gemini logo.png';
+import copilotLogo from '../github copilot.png';
+import perplexityLogo from '../perplexity logo.png';
+import midjourneyLogo from '../midjourney logo.png';
 
 
 const profilePic = './assets/profile.jpeg';
@@ -212,9 +218,10 @@ const aiTools = [
   {
     name: 'ChatGPT',
     maker: 'OpenAI',
-    initials: 'GPT',
+    logo: chatgptLogo,
     side: 'left',
     position: '4%',
+    edgeShift: '0rem',
     focus: 'Ideas, writing, and problem-solving',
     use: 'Explore concepts, shape a first draft, explain code, or turn rough ideas into clear next steps.',
     accent: 'text-[#22D3EE] border-[#22D3EE]/30 from-[#22D3EE]/15',
@@ -222,9 +229,10 @@ const aiTools = [
   {
     name: 'Claude',
     maker: 'Anthropic',
-    initials: 'CL',
+    logo: claudeLogo,
     side: 'left',
     position: '28%',
+    edgeShift: '1.75rem',
     focus: 'Long-form analysis and coding',
     use: 'Work through detailed briefs, summarize documents, and explore code or debugging problems.',
     accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
@@ -232,9 +240,10 @@ const aiTools = [
   {
     name: 'Gemini',
     maker: 'Google',
-    initials: 'G',
+    logo: geminiLogo,
     side: 'left',
     position: '59%',
+    edgeShift: '1.25rem',
     focus: 'Multimodal exploration',
     use: 'Ask questions across text and visual inputs such as screenshots, charts, images, and documents.',
     accent: 'text-[#67E8F9] border-[#22D3EE]/30 from-[#22D3EE]/15',
@@ -242,9 +251,10 @@ const aiTools = [
   {
     name: 'GitHub Copilot',
     maker: 'GitHub',
-    initials: '</>',
+    logo: copilotLogo,
     side: 'right',
     position: '13%',
+    edgeShift: '1rem',
     focus: 'In-editor coding support',
     use: 'Get contextual code suggestions, explanations, and help making changes while building.',
     accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
@@ -252,9 +262,10 @@ const aiTools = [
   {
     name: 'Perplexity',
     maker: 'Perplexity AI',
-    initials: 'P',
+    logo: perplexityLogo,
     side: 'right',
     position: '43%',
+    edgeShift: '0rem',
     focus: 'Research with cited sources',
     use: 'Explore a topic, then follow the linked sources to check important details for yourself.',
     accent: 'text-[#67E8F9] border-[#22D3EE]/30 from-[#22D3EE]/15',
@@ -262,9 +273,10 @@ const aiTools = [
   {
     name: 'Midjourney',
     maker: 'Midjourney',
-    initials: 'MJ',
+    logo: midjourneyLogo,
     side: 'right',
     position: '76%',
+    edgeShift: '1.5rem',
     focus: 'Visual concepts and image generation',
     use: 'Turn descriptive prompts into visual directions, moodboard ideas, and image concepts.',
     accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
@@ -442,13 +454,13 @@ function App() {
           <details
             key={tool.name}
             className={`ai-bubble-dock ai-bubble-${tool.side}`}
-            style={{ top: tool.position }}
+            style={{ top: tool.position, '--edge-shift': tool.edgeShift }}
           >
             <summary
-              className={`ai-bubble-trigger border ${tool.accent.split(' ')[0]} ${tool.accent.split(' ')[1]}`}
+              className={`ai-bubble-trigger border-2 ${tool.accent.split(' ')[0]} ${tool.accent.split(' ')[1]}`}
               aria-label={`Show ${tool.name} use case`}
             >
-              {tool.initials}
+              <img src={tool.logo} alt="" aria-hidden="true" className="ai-bubble-logo" decoding="async" />
             </summary>
             <div className="ai-bubble-panel rounded-2xl border border-white/10 bg-[#0B1220]/95 p-5 shadow-[0_18px_48px_rgba(2,6,23,0.6)] backdrop-blur-xl">
               <p className="text-xs uppercase tracking-[0.16em] text-gray-500">{tool.maker}</p>
@@ -458,7 +470,7 @@ function App() {
             </div>
           </details>
         ))}
-        <details className="ai-bubble-dock ai-bubble-right ai-bubble-tip" style={{ top: '92%' }}>
+        <details className="ai-bubble-dock ai-bubble-right ai-bubble-tip" style={{ top: '92%', '--edge-shift': '0.5rem' }}>
           <summary className="ai-bubble-trigger border border-[#7C3AED]/50 text-[#C4B5FD]" aria-label="Show prompt tip">
             TIP
           </summary>

@@ -30,29 +30,30 @@ body {
 .ai-bubble-dock {
   display: block;
   position: absolute;
-  width: 4rem;
-  height: 4rem;
+  width: clamp(4rem, calc((100vw - 80rem) / 2 + 4rem), 6rem);
+  height: clamp(4rem, calc((100vw - 80rem) / 2 + 4rem), 6rem);
   pointer-events: auto;
   animation: ai-bubble-float var(--float-duration, 6.5s) ease-in-out var(--float-delay, 0s) infinite;
 }
 
 .ai-bubble-left {
-  left: max(0px, calc((100vw - 80rem) / 2));
+  left: max(0px, calc((100vw - 80rem) / 2 - 4rem + var(--edge-shift, 0rem)));
 }
 
 .ai-bubble-right {
-  right: max(0px, calc((100vw - 80rem) / 2));
+  right: max(0px, calc((100vw - 80rem) / 2 - 4rem + var(--edge-shift, 0rem)));
 }
 
 .ai-bubble-trigger {
   display: flex;
-  width: 4rem;
-  height: 4rem;
+  width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  background: linear-gradient(145deg, rgb(30 41 59 / 94%), rgb(7 11 20 / 96%));
-  box-shadow: 0 0 24px rgb(34 211 238 / 14%);
+  padding: 0.35rem;
+  background: radial-gradient(circle at 35% 25%, rgb(51 65 85 / 96%), rgb(7 11 20 / 98%) 72%);
+  box-shadow: 0 0 28px rgb(34 211 238 / 20%), 0 10px 24px rgb(2 6 23 / 42%);
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: 700;
@@ -60,11 +61,35 @@ body {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
+.ai-bubble-logo {
+  display: block;
+  width: 80%;
+  height: 80%;
+  border: 2px solid rgb(255 255 255 / 92%);
+  border-radius: 9999px;
+  background: white;
+  box-shadow: 0 4px 12px rgb(2 6 23 / 32%);
+  object-fit: cover;
+}
+
+@media (min-width: 1440px) {
+  .ai-bubble-left {
+    left: calc(max(1rem, min(2vw, calc((100vw - 80rem) / 2 + 4rem - 6rem - 1rem - 1.75rem))) + var(--edge-shift, 0rem));
+  }
+
+  .ai-bubble-right {
+    right: calc(max(1rem, min(2vw, calc((100vw - 80rem) / 2 + 4rem - 6rem - 1rem - 1.75rem))) + var(--edge-shift, 0rem));
+  }
+}
+
 @media (max-width: 1023px) {
-  .ai-bubble-dock,
+  .ai-bubble-dock {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
   .ai-bubble-trigger {
-    width: 2.5rem;
-    height: 2.5rem;
+    padding: 0.25rem;
   }
 
   .ai-bubble-left {
@@ -76,63 +101,94 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .ai-bubble-dock {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-bubble-dock {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
 .ai-bubble-dock:nth-child(1) {
-  --float-duration: 7.4s;
+  --float-duration: 6.8s;
   --float-delay: -1.1s;
-  --float-distance: -15px;
-  --float-shift: 6px;
+  --float-distance: -28px;
+  --float-shift: 11px;
+  --float-rebound-distance: 12px;
+  --float-rebound-shift: -6px;
 }
 
 .ai-bubble-dock:nth-child(2) {
-  --float-duration: 9.1s;
+  --float-duration: 8.3s;
   --float-delay: -4.2s;
-  --float-distance: 18px;
-  --float-shift: -7px;
+  --float-distance: 32px;
+  --float-shift: -12px;
+  --float-rebound-distance: -10px;
+  --float-rebound-shift: 8px;
 }
 
 .ai-bubble-dock:nth-child(3) {
-  --float-duration: 6.2s;
+  --float-duration: 5.7s;
   --float-delay: -2.7s;
-  --float-distance: -21px;
-  --float-shift: 4px;
+  --float-distance: -35px;
+  --float-shift: 9px;
+  --float-rebound-distance: 14px;
+  --float-rebound-shift: -7px;
 }
 
 .ai-bubble-dock:nth-child(4) {
-  --float-duration: 8.7s;
+  --float-duration: 7.9s;
   --float-delay: -5.4s;
-  --float-distance: 12px;
-  --float-shift: -5px;
+  --float-distance: 25px;
+  --float-shift: -11px;
+  --float-rebound-distance: -13px;
+  --float-rebound-shift: 7px;
 }
 
 .ai-bubble-dock:nth-child(5) {
-  --float-duration: 5.9s;
+  --float-duration: 6.1s;
   --float-delay: -2s;
-  --float-distance: -17px;
-  --float-shift: 7px;
+  --float-distance: -31px;
+  --float-shift: 12px;
+  --float-rebound-distance: 11px;
+  --float-rebound-shift: -8px;
 }
 
 .ai-bubble-dock:nth-child(6) {
-  --float-duration: 9.6s;
+  --float-duration: 8.8s;
   --float-delay: -6.3s;
-  --float-distance: 20px;
-  --float-shift: -4px;
+  --float-distance: 36px;
+  --float-shift: -10px;
+  --float-rebound-distance: -15px;
+  --float-rebound-shift: 7px;
 }
 
 .ai-bubble-dock:nth-child(7) {
-  --float-duration: 7.8s;
+  --float-duration: 7.2s;
   --float-delay: -3.8s;
-  --float-distance: -12px;
-  --float-shift: 5px;
+  --float-distance: -24px;
+  --float-shift: 10px;
+  --float-rebound-distance: 9px;
+  --float-rebound-shift: -6px;
 }
 
 @keyframes ai-bubble-float {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate3d(0, 0, 0) rotate(-3deg);
   }
 
-  50% {
+  35% {
     transform: translate3d(var(--float-shift, 6px), var(--float-distance, -12px), 0) rotate(3deg);
+  }
+
+  68% {
+    transform: translate3d(var(--float-rebound-shift, -5px), var(--float-rebound-distance, 8px), 0) rotate(-5deg);
   }
 }
 
@@ -142,8 +198,8 @@ body {
 
 .ai-bubble-trigger:hover,
 .ai-bubble-trigger:focus-visible {
-  transform: scale(1.08);
-  box-shadow: 0 0 28px rgb(34 211 238 / 32%);
+  transform: scale(1.14);
+  box-shadow: 0 0 34px rgb(34 211 238 / 36%), 0 12px 30px rgb(2 6 23 / 48%);
 }
 
 .ai-bubble-panel {
