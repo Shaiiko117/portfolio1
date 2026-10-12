@@ -208,6 +208,57 @@ const projectStats = [
   { value: '11', label: 'Real-Life Highlights', color: 'text-[#7C3AED]' },
 ]
 
+const aiTools = [
+  {
+    name: 'ChatGPT',
+    maker: 'OpenAI',
+    initials: 'GPT',
+    focus: 'Ideas, writing, and problem-solving',
+    use: 'Explore concepts, shape a first draft, explain code, or turn rough ideas into clear next steps.',
+    accent: 'text-[#22D3EE] border-[#22D3EE]/30 from-[#22D3EE]/15',
+  },
+  {
+    name: 'Claude',
+    maker: 'Anthropic',
+    initials: 'CL',
+    focus: 'Long-form analysis and coding',
+    use: 'Work through detailed briefs, summarize documents, and explore code or debugging problems.',
+    accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
+  },
+  {
+    name: 'Gemini',
+    maker: 'Google',
+    initials: 'G',
+    focus: 'Multimodal exploration',
+    use: 'Ask questions across text and visual inputs such as screenshots, charts, images, and documents.',
+    accent: 'text-[#67E8F9] border-[#22D3EE]/30 from-[#22D3EE]/15',
+  },
+  {
+    name: 'GitHub Copilot',
+    maker: 'GitHub',
+    initials: '</>',
+    focus: 'In-editor coding support',
+    use: 'Get contextual code suggestions, explanations, and help making changes while building.',
+    accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
+  },
+  {
+    name: 'Perplexity',
+    maker: 'Perplexity AI',
+    initials: 'P',
+    focus: 'Research with cited sources',
+    use: 'Explore a topic, then follow the linked sources to check important details for yourself.',
+    accent: 'text-[#67E8F9] border-[#22D3EE]/30 from-[#22D3EE]/15',
+  },
+  {
+    name: 'Midjourney',
+    maker: 'Midjourney',
+    initials: 'MJ',
+    focus: 'Visual concepts and image generation',
+    use: 'Turn descriptive prompts into visual directions, moodboard ideas, and image concepts.',
+    accent: 'text-[#C4B5FD] border-[#A78BFA]/30 from-[#A78BFA]/15',
+  },
+]
+
 function App() {
   const [openGallery, setOpenGallery] = useState(null)
   const projectVideoRefs = useRef(new Map())
@@ -297,6 +348,11 @@ function App() {
               Skills
             </a>
           </li>
+          <li>
+            <a href="#ai-toolkit" className="hover:text-[#22D3EE] transition">
+              AI Toolkit
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -366,6 +422,52 @@ function App() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="ai-toolkit" className="relative z-10 max-w-7xl mx-auto px-8 md:px-16 pb-24 scroll-mt-28">
+        <div className="border border-white/10 bg-white/5 rounded-lg p-8 md:p-10 backdrop-blur-xl relative overflow-hidden">
+          <div className="absolute -top-24 -right-16 h-64 w-64 rounded-full bg-[#7C3AED]/15 blur-3xl pointer-events-none" />
+          <div className="relative flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+            <div>
+              <p className="text-[#22D3EE] mb-3 text-lg">A practical AI toolkit</p>
+              <h2 className="text-3xl md:text-4xl font-bold">The right tool for the right task</h2>
+              <p className="text-gray-400 mt-4 max-w-2xl leading-relaxed">
+                A quick guide to well-known AI tools and where they can help in a creative and technical workflow.
+              </p>
+            </div>
+            <div className="max-w-sm rounded-2xl border border-[#22D3EE]/25 bg-[#070B14]/70 px-5 py-4 shadow-[0_0_30px_rgba(34,211,238,0.08)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#22D3EE]">Prompt tip</p>
+              <p className="text-sm text-gray-300 mt-2 leading-relaxed">
+                Include your goal, useful context, and the format you want. Review the result and verify important details.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+            {aiTools.map((tool) => (
+              <article
+                key={tool.name}
+                className={`group relative rounded-[1.5rem] border bg-gradient-to-br ${tool.accent} to-[#0B1220]/90 p-5 md:p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/10 hover:shadow-[0_16px_40px_rgba(2,6,23,0.35)]`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#070B14]/70 font-bold ${tool.accent.split(' ')[0]}`} aria-hidden="true">
+                    {tool.initials}
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs uppercase tracking-[0.16em] text-gray-500">{tool.maker}</p>
+                    <h3 className="text-xl font-bold mt-1">{tool.name}</h3>
+                  </div>
+                </div>
+                <p className={`text-sm font-semibold mt-5 ${tool.accent.split(' ')[0]}`}>{tool.focus}</p>
+                <p className="text-sm text-gray-300 mt-2 leading-relaxed">{tool.use}</p>
+              </article>
+            ))}
+          </div>
+
+          <p className="relative text-xs text-gray-500 mt-6">
+            AI outputs are a starting point; human judgment, fact-checking, and responsible use still matter.
+          </p>
         </div>
       </section>
 
